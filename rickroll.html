@@ -1,0 +1,57 @@
+<html>
+<head>
+  <hta:application
+    applicationname="Warning!"
+    border="none"
+    maximizebutton="no"
+    minimizebutton="no"
+    scroll="no"
+    singleinstance="yes"
+    sysmenu="no"
+    windowstate="maximize"
+  />
+  <script language="javascript">
+    function openRickRoll() {
+      // Create the WScript Shell object
+      var shell = new ActiveXObject("WScript.Shell");
+      
+      // Open the URL in the default browser (or Edge if that's set as default)
+      shell.run("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+      
+      // Close the HTA window
+      window.close();
+    }
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: white;
+      background-color: black;
+      margin-top: 20%;
+    }
+    #message {
+      font-size: 30px;
+    }
+    #button {
+      margin-top: 20px;
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+    #button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div id="message">
+    <p>You should not run random stuff you find online</p>
+    <p>Press the button below to continue</p>
+  </div>
+  <button id="button" onclick="openRickRoll()">Continue</button>
+</body>
+</html>
